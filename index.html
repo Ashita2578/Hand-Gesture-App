@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Hand Gesture Recognization</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js" integrity="sha512-AQMSn1qO6KN85GOfvH6BWJk46LhlvepblftLHzAv1cdIyTWPBKHX+r+NOXVVw6+XQpeW4LJk/GTmoP48FLvblQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body background="bckgnd.jpg"; background-size="cover"; background-repeat= "no-repeat"; background-position="center"; >
+  <center>  
+    <h1>GESTURE RECOGNIZER</h1>
+    <h4>Note: It is trained for recognizing</p>
+    <span>&#9996;</span>
+    <span>&#129310;</span>
+    <span>&#129304;</span>
+    <span>&#129305;</span>
+    <span>&#128591;</span>
+    <span>&#128078;</span>
+    <span>&#128077;</span>
+    <span>&#128073;</span></h4>
+
+<p>Take a selfie for capturing gesure</p><br><br>
+</center>
+
+<div class="col-md-4 col-sm-12 col-xs-12">
+    <label>Cam View</label>
+    <div id="camera"></div>
+    <button id="capture" onclick="take_snapshot()">Capture Selfie</button>
+
+    <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Emotion 1-</label>
+          <p class="emotion_name" id="result_emotion_name"></p>
+          <p class="emoji" id="updated_emoji"></p>
+    
+          <label>Emotion 2-</label>
+            <p class="emotion_name" id="result_emotion_name2"></p>
+            <p class="emoji" id="updated_emoji2"></p>
+    </div>
+    
+             <div>
+              <label>Snapshot - </label>
+            <div id="result"></div>
+            <button id="check" onclick="predict()">Predict Emotion</button>
+            </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
+
